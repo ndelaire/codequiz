@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Need to update title -->
-    <title>Code Quiz</title>
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
 </head>
 <body>
-    <section id="quiz"></section>
-    <button id="submit">Get Results</button>
-    <section id="results"></section>
-    
+    <div class="container">
+        <h1 id="welcome"> Welcome to the JavaScript Quiz</h1>
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+               <button class="btn">Answer 1</button>
+               <button class="btn">Answer 2</button>
+               <button class="btn">Answer 3</button>
+               <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+         <button id="start-btn" class="start-btn btn">Start</button>
+         <button id="next-btn" class="next-btn btn hide">Next</button>   
+        </div>
+
+     
+    </div>
+    <script src="codequiz.js"></script>
 </body>
 </html>
