@@ -3,28 +3,23 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>JavaScript Quiz</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="style.css" rel="stylesheet">
     
 </head>
 <body>
-    <div class="container">
+    <section class="topcorner" id="timer"></section>
+    <section class="container">
         <h1 id="welcome"> Welcome to the JavaScript Quiz</h1>
-        <div id="question-container" class="hide">
+        <section id="question-container" class="hide">
             <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-               <button class="btn">Answer 1</button>
-               <button class="btn">Answer 2</button>
-               <button class="btn">Answer 3</button>
-               <button class="btn">Answer 4</button>
-            </div>
-        </div>
-        <div class="controls">
+            <div id="answer-buttons" class="btn-grid"></div>
+        </section>
+        <section class="controls">
          <button id="start-btn" class="start-btn btn">Start</button>
-         <button id="next-btn" class="next-btn btn hide">Next</button>   
-        </div>
-
-     
-    </div>
+         <h3 id="correct" class="hide">Correct</h3>  
+         <h3 id="wrong" class="hide">Wrong</h3>
+        </section>    
+    </section>
     <script src="codequiz.js"></script>
 </body>
 </html>
