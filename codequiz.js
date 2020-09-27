@@ -63,7 +63,7 @@ function checkAnswers() {
             correctAns.classList.add("hide")
         }, 1000);
     } else {
-        secondsLeft -= 2;
+        secondsLeft -= 5;
         timeEl.textContent = secondsLeft + " seconds left till quiz is over.";
         wrongAns.classList.remove("hide")
         setTimeout(() => {
@@ -84,6 +84,7 @@ startButton.addEventListener("click", startGame)
 function endQuiz() {
     clearInterval(timerInterval);
     console.log("game over");
+    if ()
     // when the timer runs out or the user answers all the questions, it takes them to a new page with their score 
     // would this be an if statement? 
 }
@@ -124,7 +125,8 @@ var questions = [{
         answers: [
             "var colors = ['red', 'blue', 'green']",
             "var colors = (red, blue, green)",
-            "var colors = {red red blue green}",
+            "var colors = {red blue green}",
+            "varColors = ([red blue green])",
         ],
         correct: "var colors = ['red', 'blue', 'green']"
     },
