@@ -53,15 +53,32 @@ let questions = [
     }
 ]
 
-
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
+
+var timeEl = document.querySelector(".topcorner");
+var mainEl = document.getElementById("timer");
+var timerInterval;
+var secondsLeft = 60;
+
+function setTime() {
+    timerInterval = setInterval(function () {
+        secondsLeft--;
+        timeEl.textContent = secondsLeft + " seconds left till quiz is over.";
+
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval);
+        }
+
+    }, 1000);
+}
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
+    setTime
   };
   
   getNewQuestion = () => {
