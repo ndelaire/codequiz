@@ -56,21 +56,22 @@ let questions = [
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
 
-var timeEl = document.querySelector(".topcorner");
-var mainEl = document.getElementById("timer");
-var timerInterval;
-var secondsLeft = 60;
+var timeLeft = 30;
+var elem = document.getElementById('timer');
+var timerId = setInterval(countdown, 1000);
 
-function setTime() {
-    timerInterval = setInterval(function () {
-        secondsLeft--;
-        timeEl.textContent = secondsLeft + " seconds left till quiz is over.";
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+        quizOver();
+    } else {
+        elem.innerHTML = timeLeft + ' seconds remaining';
+        timeLeft--;
+    }
+}
 
-        if (secondsLeft === 0) {
-            clearInterval(timerInterval);
-        }
-
-    }, 1000);
+function quizOver() {
+    alert("Quiz Over");
 }
 
 startGame = () => {
@@ -131,5 +132,6 @@ startGame = () => {
     score += num;
     scoreText.innerText = score;
   };
+
   
   startGame();
