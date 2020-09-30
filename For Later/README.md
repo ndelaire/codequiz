@@ -1,2 +1,0 @@
-# codequiz
-Homework 4

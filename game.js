@@ -56,22 +56,23 @@ let questions = [
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
 
-var timeLeft = 30;
-var elem = document.getElementById('timer');
-var timerId = setInterval(countdown, 1000);
+let timeLeft = 20;
+let elem = document.getElementById('timer');
+let timerId = setInterval(countdown, 1000);
 
 function countdown() {
-    if (timeLeft == -1) {
-        clearTimeout(timerId);
-        quizOver();
-    } else {
-        elem.innerHTML = timeLeft + ' seconds remaining';
-        timeLeft--;
-    }
+  if (timeLeft < 0) {
+      clearTimeout(timerId);
+      quizOver();
+
+  } else {
+      elem.innerHTML = timeLeft + ' seconds remaining';
+      timeLeft--;     
+  }
 }
 
 function quizOver() {
-    alert("Quiz Over");
+  window.location.assign("/end.html");
 }
 
 startGame = () => {
@@ -79,7 +80,6 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
-    setTime
   };
   
   getNewQuestion = () => {
@@ -114,9 +114,12 @@ startGame = () => {
   
       const classToApply =
         selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+        timeLeft -=5
   
       if (classToApply === "correct") {
         incrementScore(CORRECT_BONUS);
+      } else {
+        console.log(timeLeft)
       }
   
       selectedChoice.parentElement.classList.add(classToApply);
