@@ -1,4 +1,4 @@
-# Homework 3 : Password Generator
+# Homework 4 : Code Quiz
 * You can take a look at the [project page](https://github.com/ndelaire/codequiz)
 * View the [deployed GitHub page](https://ndelaire.github.io/codequiz/)
 
