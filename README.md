@@ -26,7 +26,7 @@ CSS was created that would apply to every part of the app along with separate pa
 
 JavaScript pages were created for the game page, high scores, and the end page. JavaScript was used on the game page to move questions along, show green for correct answers and red for wrong, keep track of what question you are on, and for the timer. It was also used to log scores on local storage. 
 
-
+## Frameworks
 JavaScript
 
 ## License 
