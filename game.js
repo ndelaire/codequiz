@@ -56,7 +56,7 @@ let questions = [
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
 
-let timeLeft = 20;
+let timeLeft = 30;
 let elem = document.getElementById('timer');
 let timerId = setInterval(countdown, 1000);
 
@@ -72,7 +72,7 @@ function countdown() {
 }
 
 function quizOver() {
-  window.location.assign("/end.html");
+  window.location.assign("end.html");
 }
 
 startGame = () => {
@@ -86,7 +86,7 @@ startGame = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score)
    
-      return window.location.assign("/end.html");
+      return window.location.assign("end.html");
     }
     questionCounter++;
     questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
