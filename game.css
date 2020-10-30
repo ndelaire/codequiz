@@ -17,7 +17,7 @@
     transition: transform 150ms;
   }
   
-  .choice-prefix {
+  .choice {
     padding: 1.5rem 2.5rem;
     background-color: #f709a7de;
     color: white;
@@ -38,16 +38,16 @@
   
 
   
-  #hud {
+  #display {
     display: flex;
     justify-content: space-between;
   }
   
-  .hud-prefix {
+  .scores {
     text-align: center;
     font-size: 2rem;
   }
   
-  .hud-main-text {
+  .main-text {
     text-align: center;
   }
